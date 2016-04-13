@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "951c7da204e5262700574a2a3e61a141",
-    "content-hash": "76b8fccd7a96960205d81e8622577f00",
+    "hash": "9c7f2fca2efc12a90479114460e51506",
+    "content-hash": "66509355c6d9491b8f4ce594c2dc5caf",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -871,12 +871,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-captcha.git",
-                "reference": "033588c1e7ccfdccb7f25bfa2fb16bf260d84d1c"
+                "reference": "7342a13028b948eb714aa97c8bb9b3b96624f43c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-captcha/zipball/033588c1e7ccfdccb7f25bfa2fb16bf260d84d1c",
-                "reference": "033588c1e7ccfdccb7f25bfa2fb16bf260d84d1c",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-captcha/zipball/7342a13028b948eb714aa97c8bb9b3b96624f43c",
+                "reference": "7342a13028b948eb714aa97c8bb9b3b96624f43c",
                 "shasum": ""
             },
             "require": {
@@ -909,7 +909,7 @@
                 "math",
                 "yii2"
             ],
-            "time": "2016-02-10 06:09:36"
+            "time": "2016-04-13 07:39:00"
         },
         {
             "name": "mdmsoft/yii2-upload-file",
@@ -1115,12 +1115,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "5ad72ae0546e337b51ace609a0a0bfa12953521c"
+                "reference": "69ee5cfbcdc12b8ec44aa889d0797b0837db5c6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5ad72ae0546e337b51ace609a0a0bfa12953521c",
-                "reference": "5ad72ae0546e337b51ace609a0a0bfa12953521c",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/69ee5cfbcdc12b8ec44aa889d0797b0837db5c6a",
+                "reference": "69ee5cfbcdc12b8ec44aa889d0797b0837db5c6a",
                 "shasum": ""
             },
             "require": {
@@ -1201,7 +1201,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-04-12 13:34:47"
+            "time": "2016-04-13 03:52:48"
         },
         {
             "name": "yiisoft/yii2-bootstrap",

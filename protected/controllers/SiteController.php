@@ -23,7 +23,6 @@ class SiteController extends Controller
             ],
             'captcha' => [
                 'class' => 'mdm\captcha\CaptchaAction',
-                'level' => 1,
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
             'page' => [
