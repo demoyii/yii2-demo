@@ -6,7 +6,7 @@ use yii\helpers\Html;
 
 /* @var $this View */
 $this->title = 'Simple Chat';
-
+list(,$mainUrl) = Yii::$app->getAssetManager()->publish('@app/assets/main');
 ?>
 <div class="row">
     <div class="box box-primary direct-chat direct-chat-primary">
@@ -38,7 +38,7 @@ $this->title = 'Simple Chat';
         <span class="direct-chat-name pull-left" data-attr="name"></span>
         <span class="direct-chat-timestamp pull-right" data-attr="time"></span>
     </div>
-    <?= Html::img('@web/assets/main/img/user-you.jpg', ['class' => 'direct-chat-img']) ?>
+    <?= Html::img($mainUrl . '/img/user-you.jpg', ['class' => 'direct-chat-img']) ?>
     <div class="direct-chat-text" data-attr="text"></div>
 </div>
 <?php $this->endBlock(); ?>
@@ -48,7 +48,7 @@ $this->title = 'Simple Chat';
         <span class="direct-chat-name pull-right" data-attr="name">Me</span>
         <span class="direct-chat-timestamp pull-left" data-attr="time"></span>
     </div>
-    <?= Html::img('@web/assets/main/img/user-me.jpg', ['class' => 'direct-chat-img']) ?>
+    <?= Html::img($mainUrl . '/img/user-me.jpg', ['class' => 'direct-chat-img']) ?>
     <div class="direct-chat-text" data-attr="text"></div>
 </div>
 <?php
