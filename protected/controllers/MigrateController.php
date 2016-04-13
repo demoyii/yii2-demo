@@ -15,7 +15,7 @@ defined('STDOUT') or define('STDOUT', fopen('php://output', 'w'));
  */
 class MigrateController extends Controller
 {
-    public $db = 'db';
+    public $db = ['dsn' => 'sqlite:@runtime/test_migrate.sqlite'];
 
     /**
      *

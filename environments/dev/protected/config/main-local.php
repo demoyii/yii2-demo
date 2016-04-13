@@ -19,7 +19,7 @@ return [
         ],
         'cache' => [
             'class' => 'yii\caching\DbCache',
-            //'db' => ['dsn' => 'sqlite:@runtime/cache.sqlite']
+            'db' => ['dsn' => 'sqlite:@runtime/cache.sqlite']
         ],
     ],
 ];

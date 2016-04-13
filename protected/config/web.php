@@ -9,16 +9,10 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\controllers',
+    'aliases' => [
+        '@themes' => dirname(__DIR__) . '/themes',
+    ],
     'components' => [
-        'view' => [
-            'theme' => [
-                'class' => 'themes\Theme',
-                //'default' => 'adminlte',
-                'themes' => [
-                    'adminlte' => '@themes/adminlte',
-                ]
-            ]
-        ],
         'user' => [
             'identityClass' => 'app\models\ar\User',
             'loginUrl' => ['user/login'],

@@ -14,7 +14,7 @@ return [
         ],
         'session' => [
             'class' => 'yii\web\DbSession',
-            //'db' => ['dsn' => 'sqlite:@runtime/session.sqlite']
+            'db' => ['dsn' => 'sqlite:@runtime/session.sqlite']
         ]
     ],
 ];

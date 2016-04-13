@@ -12,7 +12,7 @@ use app\components\SSE;
  */
 class ChatController extends Controller
 {
-    public $enableCsrfValidation = false;
+    public $layout = '@themes/adminlte/views/layouts/main.php';
 
     /**
      * @inheritdoc
@@ -62,7 +62,7 @@ class ChatController extends Controller
                 ->innerJoin(['u' => 'user'], '[[c.user_id]]=[[u.id]]')
                 ->where('[[c.time]]>:ctime')
                 ->orderBy(['c.time' => SORT_DESC])
-                ->limit(50);
+                ->limit(150);
 
             for ($i = 0; $i <= $MAX_CONN; $i++) {
                 $rows = $chats->params([':ctime' => $lastTime])->all();
@@ -71,7 +71,7 @@ class ChatController extends Controller
                 foreach (array_reverse($rows) as $row) {
                     $msgs[] = [
                         'own' => $row['user_id'] == $user_id,
-                        'time' => date('H:i:s', $row['time']),
+                        'time' => date($row['time'] < ($lastTime - 86400) ? 'd M H:i' : 'H:i:s', $row['time']),
                         'name' => $row['user_id'] == $user_id ? 'Me' : $row['username'],
                         'text' => $row['text']
                     ];
