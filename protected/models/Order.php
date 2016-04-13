@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "order".
  *
  * @property integer $id
+ * @property string $number
  * @property string $date
  * @property string $keterangan
  *
@@ -15,6 +16,7 @@ use Yii;
  */
 class Order extends \yii\db\ActiveRecord
 {
+
     use \mdm\behaviors\ar\RelationTrait;
 
     /**
@@ -31,8 +33,9 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date'], 'required'],
+            [['Date'], 'required'],
             [['date'], 'safe'],
+            [['!number'], 'autonumber', 'format' => date('Ymd-?'), 'digit' => 4],
             [['keterangan'], 'string', 'max' => 128],
         ];
     }
@@ -60,5 +63,19 @@ class Order extends \yii\db\ActiveRecord
     public function setOrderItems($value)
     {
         $this->loadRelated('orderItems', $value);
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => 'mdm\converter\DateConverter',
+                'type' => 'date', // 'date', 'time', 'datetime'
+                'logicalFormat' => 'php:d-m-Y',
+                'attributes' => [
+                    'Date' => 'date',
+                ]
+            ],
+        ];
     }
 }

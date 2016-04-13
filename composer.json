@@ -5,8 +5,8 @@
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/deesoft/yii2-app-single/issues?state=open",
-        "source": "https://github.com/deesoft/yii2-app-single"
+        "issues": "https://github.com/demoyii/yii2-demo/issues?state=open",
+        "source": "https://github.com/demoyii/yii2-demo"
     },
     "minimum-stability": "dev",
     "require": {
@@ -22,6 +22,8 @@
         "mdmsoft/yii2-captcha": "~1.0",
         "mdmsoft/yii2-upload-file": "~1.0",
         "mdmsoft/yii2-ar-behaviors": "~1.0",
+        "mdmsoft/yii2-format-converter": "~1.0",
+        "mdmsoft/yii2-autonumber": "~1.0",
         "mdmsoft/yii2-widgets": "~1.0",
         "mdmsoft/yii2-action-filter": "~1.0",
         "rmrevin/yii2-fontawesome": "~2.0",

@@ -14,6 +14,7 @@ class m160320_191634_order extends Migration
         }
         $this->createTable('{{%order}}', [
             'id' => $this->primaryKey(),
+            'number' => $this->string(16)->notNull(),
             'date' => $this->date()->notNull(),
             'keterangan' => $this->string(128),
             ], $tableOptions);
