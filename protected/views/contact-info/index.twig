@@ -1,0 +1,35 @@
+{{ set(this, 'title', 'List Contact') }}
+<div class="index">
+    <div >
+        <a href="{{ path(['create']) }}" class="btn btn-success">Create</a>      
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Keterangan</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.keterangan }}</td>
+                    <td>
+                        <a href="{{ path('view', {'id' : contact.id}) }}"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="{{ path('update', {'id' : contact.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="{{ path('delete', {'id' : contact.id}) }}" data-method="post"
+                           data-confirm="Yakin akan menghapus ini">
+                            <span class="glyphicon glyphicon-trash"></span></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   
+</div>

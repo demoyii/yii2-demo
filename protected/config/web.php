@@ -1,7 +1,6 @@
 <?php
 $params = array_merge(
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
 return [
@@ -17,6 +16,21 @@ return [
             'identityClass' => 'app\models\ar\User',
             'loginUrl' => ['user/login'],
             'enableAutoLogin' => true,
+        ],
+        'view' => [
+            'renderers' => [
+                'twig' => [
+                    'class' => 'yii\twig\ViewRenderer',
+                    'cachePath' => '@runtime/Twig/cache',
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    'globals' => [
+                        'Url' => '\yii\helpers\Url',
+                        'html' => 'yii\helpers\Html'
+                    ],
+                ],
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

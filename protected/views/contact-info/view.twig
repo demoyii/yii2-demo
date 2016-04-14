@@ -1,0 +1,16 @@
+{{ set(this, 'title', 'Lihat Contact') }}
+<div class="view">
+    <div>
+        <div>Name: {{model.name}}</div>
+        <div>Email: {{model.email}}</div>
+
+        <div>Phone: {{model.phone}}</div>
+        <div>Keterangan: {{model.keterangan}}</div>
+    </div>
+    <p>
+        <a href="{{path('update', {'id':model.id})}}" class="btn btn-primary">Update</a>
+        <a href="{{path('delete', {'id':model.id})}}" class="btn btn-danger" data-method="post"
+           data-confirm="Yakin akan menghapus ini">Delete</a>
+        {{ html.a('List contact',['index'], {'class': 'btn btn-default'}) | raw}}
+    </p>
+</div>

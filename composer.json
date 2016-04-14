@@ -15,6 +15,7 @@
         "yiisoft/yii2-bootstrap": "~2.0",
         "yiisoft/yii2-swiftmailer": "~2.0",
         "yiisoft/yii2-jui": "~2.0",
+        "yiisoft/yii2-twig": "~2.0",
         "deesoft/yii2-console": "~1.0",
         "deesoft/yii2-tools": "~1.0",
         "deesoft/yii2-handsontable": "~1.0",
